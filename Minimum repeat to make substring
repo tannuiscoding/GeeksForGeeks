@@ -1,0 +1,19 @@
+class Solution {
+  public:
+    int minRepeats(string& s1, string& s2) {
+        // code here
+        string rep = s1;
+        int count = 1;
+        string curr = s1;
+        while(curr.size()<s2.size()){
+            curr= curr +rep;
+            count++;
+        }
+        
+        if(curr.find(s2)!=string::npos) return count;
+        curr+=rep;
+        count++;
+        if(curr.find(s2)!=string::npos) return count;
+        return -1;
+    }
+};
