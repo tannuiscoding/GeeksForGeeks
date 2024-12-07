@@ -1,4 +1,4 @@
-
+//rotate an array by d places.
 class Solution {
   public:
 
